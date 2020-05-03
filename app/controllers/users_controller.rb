@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
     get "/login" do
         if logged_in?
-            redirect "/days"
+            redirect "/days/today"
         else
             erb :"/users/login"
         end
@@ -13,7 +13,7 @@ class UsersController < ApplicationController
             @user = User.find_by(email: params[:email])
             if @user && @user.authenticate(params[:password])
                 session[:user_id] = @user.id
-                redirect "/days"
+                redirect "/days/today"
             else 
                 redirect "/login"
             end
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
 
     get "/signup" do
         if logged_in?
-            redirect "/days"
+            redirect "/days/today"
         else
             erb :"/users/signup"
         end
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
         if params[:email] != "" && params[:password] != ""
             @user = User.create(params)
             session[:user_id] = @user.id
-            redirect "/days"
+            redirect "/days/today"
         else
             redirect "/signup"
         end
