@@ -1,7 +1,8 @@
 class DaysController < ApplicationController
     get "/days" do
         if logged_in?
-            @days = Day.all
+            @user = current_user
+            @days = @user.days
             erb :"/days/days"
         else
             redirect "/login"
