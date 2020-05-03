@@ -12,7 +12,7 @@ class DaysController < ApplicationController
     get "/days/today" do
         if logged_in?
             @user = current_user
-            @day = Day.find_by(date: Date.today)
+            @day = Day.find_by(date: Date.today, user_id: @user.id)
             if @day
                 redirect "/days/#{@day.id}"
             else

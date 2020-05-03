@@ -5,6 +5,6 @@ Protein: <%= @day.protein %><br>
 Carbs: <%= @day.carbs %><br>
 Fat: <%= @day.fat %><br>
 <br><br>
-<a href="/days/#{@day.id}/edit">Add Food</a>
+<a href="/days/<%= @day.id %>/edit">Add Food</a>
 <br>
 <a href="/days">Previous Days</a>

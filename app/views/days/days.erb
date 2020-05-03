@@ -2,3 +2,6 @@ Welcome, <%= @user.email %>!<br>
 <% @days.each do |d| %>
     <a href="/days/<%= d.id %>"><%= d.date %>: <%= d.calories %> kcal</a>
 <% end %>
+
+<hr>
+<a href="/days/today">Return to Today</a>
