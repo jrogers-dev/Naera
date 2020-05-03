@@ -9,11 +9,11 @@ class UsersController < ApplicationController
     end
 
     post "/login" do
-        if params[:username] != "" && params[:password] != ""
-            @user = User.find_by(username: params[:username])
+        if params[:email] != "" && params[:password] != ""
+            @user = User.find_by(email: params[:email])
             if @user && @user.authenticate(params[:password])
                 session[:user_id] = @user.id
-                redirect "/tweets"
+                redirect "/days"
             else 
                 redirect "/login"
             end
