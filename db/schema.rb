@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_04_053050) do
+ActiveRecord::Schema.define(version: 2020_05_04_090752) do
+
+  create_table "day_foods", force: :cascade do |t|
+    t.integer "day_id"
+    t.integer "food_id"
+  end
 
   create_table "days", force: :cascade do |t|
     t.date "date"
@@ -19,11 +24,6 @@ ActiveRecord::Schema.define(version: 2020_05_04_053050) do
     t.integer "carbs"
     t.integer "fat"
     t.integer "user_id"
-  end
-
-  create_table "days_foods", force: :cascade do |t|
-    t.integer "day_id"
-    t.integer "food_id"
   end
 
   create_table "foods", force: :cascade do |t|

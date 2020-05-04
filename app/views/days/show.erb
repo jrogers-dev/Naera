@@ -1,9 +1,14 @@
-Welcome, <%= @user.email %>!<br>
+<h3>Welcome, <%= @user.email %>!</h3><br>
 Today: <%= @day.date %><br>
 Calories: <%= @day.calories %><br>
 Protein: <%= @day.protein %><br>
 Carbs: <%= @day.carbs %><br>
 Fat: <%= @day.fat %><br>
+<br><br>
+Foods for this day:<br>
+<% @day.foods.each do |f| %>
+    <%= f.name %>: <%= f.calories %> kcal<br>
+<% end %>
 <br><br>
 <a href="/days/<%= @day.id %>/edit">Add Food</a>
 <br>

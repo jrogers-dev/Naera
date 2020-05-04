@@ -36,9 +36,13 @@ class DaysController < ApplicationController
     end
 
     post "/days/:id" do
+        @user = current_user
         @day = Day.find(params[:id])
-        if params[:content] != ""
-            @day.update(content: params[:content])
+        if params[:name] != ""
+            @food = Food.create(params[:food])
+            @user.foods << @food
+            @day.foods << @food
+            @day.update_stats
             redirect "/days/#{@day.id}"
         else
             redirect "/days/#{@day.id}/edit"

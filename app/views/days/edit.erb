@@ -1,13 +1,13 @@
 Enter the details of a new food or select a previously created food to add to your day: 
 
 <form method="POST" action="/days/<%= @day.id %>">
-    <input type="text" name="name" placeholder="Name">
-    <input type="number" name="portion_size" placeholder="Portion Size">
-    <input type="text" name="portion_metric" placeholder="Metric (ex: g, ml, oz)">
-    <input type="number" name="calories" placeholder="Calories">
-    <input type="number" name="protein" placeholder="Protein (in grams)">
-    <input type="number" name="carbs" placeholder="Carbs (in grams)">
-    <input type="number" name="fat" placeholder="Fat (in grams)">
+    <input type="text" name="food[name]" placeholder="Name">
+    <input type="number" name="food[portion_size]" placeholder="Portion Size">
+    <input type="text" name="food[portion_metric]" placeholder="Metric (ex: g, ml, oz)">
+    <input type="number" name="food[calories]" placeholder="Calories">
+    <input type="number" name="food[protein]" placeholder="Protein (in grams)">
+    <input type="number" name="food[carbs]" placeholder="Carbs (in grams)">
+    <input type="number" name="food[fat]" placeholder="Fat (in grams)">
 
     <input type="submit" name="submit" value="Update Day">
 </form>
