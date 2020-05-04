@@ -8,7 +8,7 @@ class CreateFoods < ActiveRecord::Migration[6.0]
       t.integer :protein
       t.integer :carbs
       t.integer :fat
-      t.integer :day_id
+      t.integer :user_id
     end
   end
 end
