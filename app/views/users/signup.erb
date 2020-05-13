@@ -16,27 +16,27 @@
         </div>
         <div class="card-body">
             <h5 class="card-title text-center">Register</h5>
-            <form class="form-signin">
+            <form class="form-signin" method="POST" action="/signup">
                 <br><br>
               <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required>
                 <label for="inputEmail">Email address</label>
               </div>
               
               <br>
 
               <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
                 <label for="inputPassword">Password</label>
               </div>
               
               <div class="form-label-group">
-                <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
+                <input type="password" id="inputConfirmPassword" name="confirm" class="form-control" placeholder="Password" required>
                 <label for="inputConfirmPassword">Confirm password</label>
               </div>
                 <br><br>
               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
-              <a class="d-block text-center mt-2 small" href="#">Sign In</a>
+              <a class="d-block text-center mt-2 small" href="/login">Sign In</a>
               <br><br>
             </form>
           </div>
@@ -49,8 +49,8 @@
 
 
 
-<form method="POST" action="/signup">
-    Email: <input type="text" name="email" id="email"><br>
-    Password: <input type="text" name="password" id="password"><br>
-    <input type="submit" value="Submit">
-</form>
+<!--<form method="POST" action="/signup">-->
+<!--    Email: <input type="text" name="email" id="email"><br>-->
+<!--    Password: <input type="text" name="password" id="password"><br>-->
+<!--    <input type="submit" value="Submit">-->
+<!--</form>-->

@@ -18,14 +18,14 @@
           <div class="card-body">
             <h5 class="card-title text-center">Welcome Back!</h5>
             <br><br><br>
-            <form class="form-signin">
+            <form class="form-signin" method="POST" action="/login">
                 <div class="form-label-group">
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                    <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required>
                     <label for="inputEmail">Email address</label>
                 </div>
 
                 <div class="form-label-group">
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
                     <label for="inputPassword">Password</label>
                 </div>
                 <br><br><br>

@@ -32,9 +32,12 @@ class UsersController < ApplicationController
 
     post "/signup" do
         if params[:email] != "" && params[:password] != ""
-            @user = User.create(params)
-            session[:user_id] = @user.id
-            redirect "/days/today"
+            if params[:password] == params[:confirm]
+                params.delete(:confirm)
+                @user = User.create(params)
+                session[:user_id] = @user.id
+                redirect "/days/today"
+            end
         else
             redirect "/signup"
         end
