@@ -28,7 +28,7 @@
  .s-layout__content {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /*align-items: center;*/
     flex: 1;
  }
  
@@ -101,11 +101,12 @@
  
  .s-sidebar__nav-link > i {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
     display: inline-block;
     width: 4em;
     height: 4em;
+    transform: translateY(-50%);
  }
  
  .s-sidebar__nav-link > i::before {

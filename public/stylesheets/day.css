@@ -1,0 +1,16 @@
+.col-md-12 h2{
+    padding-top: 50px;
+    text-align: center; 
+}
+
+.table-responsive {
+    padding-left: 20px;
+}
+
+.table-responsive th {
+    text-align: center;
+}
+
+.table-responsive td {
+    text-align: center;
+}
