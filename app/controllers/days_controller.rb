@@ -29,7 +29,7 @@ class DaysController < ApplicationController
         if logged_in?
             @user = current_user
             @day = Day.find(params[:id])
-            erb :"/days/show1"
+            erb :"/days/show"
         else
             redirect "/login"
         end
