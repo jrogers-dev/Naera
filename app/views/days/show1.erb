@@ -1,6 +1,9 @@
-<link rel="stylesheet" href="/stylesheets/sidebar.css" />
-<link rel="stylesheet" href="/stylesheets/tritable.css" />
-<link rel="stylesheet" href="/stylesheets/day.css" />
+  
+  <link rel="stylesheet" href="/stylesheets/tritable.css" />
+  <link rel="stylesheet" href="/stylesheets/day.css" />
+  <link rel="stylesheet" href="/stylesheets/sidebar.css" />
+</head>
+<body>
 <div class="s-layout">
 
   <!-- Sidebar -->
@@ -57,7 +60,7 @@
                               <h3>PROTEIN</h3>
                           </div>
                           <div class="price">
-                              <h4>25g</h4>
+                              <h4><%= @day.protein %>g</h4>
                           </div>
                       </div>
                   </div>
@@ -68,7 +71,7 @@
                               <h3>CARBS</h3>
                           </div>
                           <div class="price">
-                              <h4>50g</h4>
+                              <h4><%= @day.carbs %>g</h4>
                           </div>
                       </div>
                   </div>
@@ -79,18 +82,41 @@
                               <h3>FATS</h3>
                           </div>
                           <div class="price">
-                              <h4>150g</h4>
+                              <h4><%= @day.fat %>g</h4>
                           </div>
                       </div>
                   </div>
               </div>
+
+              <div class="row justify-content-md-center">
+                  <div>
+                      <div class="item">
+                          <div class="heading">
+                              <h3>CALORIES</h3>
+                          </div>
+                          <div class="price">
+                              <h4><%= @day.calories %> kcal</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
           </div>
       </section>
       
       <!-- Food Table Section-->
       <div class="row">
         <div class="col-md-12">
-          <h2>Foods for This Day</h2>
+          <h2>Foods for This Day
+          <a href="/days/<%= @day.id %>/edit">  
+          <button
+            class="btn btn-success btn-m"
+            data-title="Add"
+            data-toggle="modal"
+            data-target="#add"
+          >
+            <span class="glyphicon glyphicon-plus"> </span> Add
+          </button></a></h2>
           <div class="table-responsive">
             <table id="mytable" class="table table-bordred table-striped">
               <thead>

@@ -11,7 +11,7 @@
 }
 
 .pricing-table .block-heading h1 {
-  color: #3b99e0;
+  color: #56e03b;
 }
 
 .pricing-table .block-heading p {
@@ -28,10 +28,10 @@
 }
 
 .pricing-table .item {
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
-  border-top: 2px solid #5ea4f3;
-  border-bottom: 2px solid #5ea4f3;
+  border-top: 2px solid #6af35e;
+  border-bottom: 2px solid #81f35e;
   padding: 10px;
   overflow: hidden;
   position: relative; 
@@ -60,5 +60,5 @@
   
   font-size: 45px;
   text-align: center;
-  color: #2288f9; 
+  color: #3bf922; 
 }
