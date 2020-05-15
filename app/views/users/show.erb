@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="/stylesheets/sidebar.css" />
+</head>
+<body>
+<div class="s-layout">
+
+  <!-- Sidebar -->
+  <div class="s-layout__sidebar">
+    <a class="s-sidebar__trigger" href="#0">
+      <i class="fa fa-bars"></i>
+    </a>
+
+    <nav class="s-sidebar__nav">
+      <ul>
+          <li>
+            <a class="s-sidebar__nav-link" href="#0">
+                <i class="fa fa-user"></i><em><%= @user.email %></em>
+            </a>
+          </li>
+          <li>
+            <a class="s-sidebar__nav-link" href="/days/today">
+                <i class="fa fa-clock-o"></i><em>Today</em>
+            </a>
+          </li>
+          <li>
+            <a class="s-sidebar__nav-link" href="/days">
+              <i class="fa fa-calendar"></i><em>Previous Days</em>
+            </a>
+          </li>
+          <li>
+            <a class="s-sidebar__nav-link" href="#0">
+                <i class="fa fa-cutlery"></i><em>Foods</em>
+            </a>
+          </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Right Side -->
+  <main class="s-layout__content">
+    <div class="container">
+
+      
+    </div>
+  </main>
+</div>
