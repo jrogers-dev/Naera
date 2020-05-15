@@ -28,8 +28,6 @@ ActiveRecord::Schema.define(version: 2020_05_04_090752) do
 
   create_table "foods", force: :cascade do |t|
     t.string "name"
-    t.integer "portion_size"
-    t.string "portion_metric"
     t.integer "calories"
     t.integer "protein"
     t.integer "carbs"

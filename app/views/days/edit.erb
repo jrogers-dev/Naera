@@ -26,11 +26,6 @@
            </a>
         </li>
         <li>
-           <a class="s-sidebar__nav-link" href="/foods">
-              <i class="fa fa-cutlery"></i><em>Foods</em>
-           </a>
-        </li>
-        <li>
             <a class="s-sidebar__nav-link" href="/logout">
                 <i class="fa fa-sign-out"></i><em>Logout</em>
             </a>
@@ -45,38 +40,28 @@
 <form method="POST" action="/days/<%= @day.id %>">
   <div class="form-group">
     <label for="foodName">Name</label>
-    <input type="text" class="form-control" id="foodName" name="name" aria-describedby="foodHelp" placeholder="Pizza">
+    <input type="text" class="form-control" id="foodName" name="food[name]" aria-describedby="foodHelp" placeholder="Pizza" required>
     <small id="foodHelp" class="form-text text-muted">What's the food called?</small>
   </div>
   <div class="form-group">
-    <label for="portionSize">Portions</label>
-    <input type="number" class="form-control" id="portionSize" name="portion_size" aria-describedby="portionHelp" placeholder="2">
-    <small id="portionHelp" class="form-text text-muted">How many portions did you eat?</small>
-  </div>
-  <div class="form-group">
-    <label for="portionMetric">Portions Type</label>
-    <input type="text" class="form-control" id="portionMetric" name="portion_metric" aria-describedby="portionMetricHelp" placeholder="Ounces">
-    <small id="portionMetricHelp" class="form-text text-muted">How are the portions measured?</small>
-  </div>
-  <div class="form-group">
     <label for="calories">Calories</label>
-    <input type="number" class="form-control" id="calories" name="calories" aria-describedby="caloriesHelp" placeholder="130">
-    <small id="caloriesHelp" class="form-text text-muted">How many calories are in each portion?</small>
+    <input type="number" class="form-control" id="calories" name="food[calories]" aria-describedby="caloriesHelp" placeholder="130" required>
+    <small id="caloriesHelp" class="form-text text-muted">How many calories did it contain?</small>
   </div>
   <div class="form-group">
     <label for="protein">Protein</label>
-    <input type="number" class="form-control" id="protein" name="protein" aria-describedby="proteinHelp" placeholder="30">
-    <small id="proteinHelp" class="form-text text-muted">How many portions did you eat?</small>
+    <input type="number" class="form-control" id="protein" name="food[protein]" aria-describedby="proteinHelp" placeholder="30" required>
+    <small id="proteinHelp" class="form-text text-muted">How many grams of protein did it contain?</small>
   </div>
   <div class="form-group">
     <label for="carbs">Carbs</label>
-    <input type="number" class="form-control" id="carbs" name="carbs" aria-describedby="carbsHelp" placeholder="40">
-    <small id="carbsHelp" class="form-text text-muted">How many portions did you eat?</small>
+    <input type="number" class="form-control" id="carbs" name="food[carbs]" aria-describedby="carbsHelp" placeholder="40" required>
+    <small id="carbsHelp" class="form-text text-muted">How many grams of carbs did it contain?</small>
   </div>
   <div class="form-group">
     <label for="fat">Fat</label>
-    <input type="number" class="form-control" id="fat" name="fat" aria-describedby="fatHelp" placeholder="20">
-    <small id="fatHelp" class="form-text text-muted">How many portions did you eat?</small>
+    <input type="number" class="form-control" id="fat" name="food[fat]" aria-describedby="fatHelp" placeholder="20" required>
+    <small id="fatHelp" class="form-text text-muted">How many grams of fat did it contain?</small>
   </div>
   <button type="submit" class="btn btn-primary" name="submit">Add Food</button>
 </form>
