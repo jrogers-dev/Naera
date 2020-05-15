@@ -7,4 +7,5 @@ end
 use Rack::MethodOverride
 use DaysController
 use UsersController
+use FoodsController
 run ApplicationController
