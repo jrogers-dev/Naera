@@ -25,6 +25,12 @@ class DaysController < ApplicationController
         end
     end
 
+    get "/days/create" do
+
+    end
+
+    
+
     get "/days/:id" do
         if logged_in?
             @user = current_user
@@ -35,6 +41,8 @@ class DaysController < ApplicationController
         end
     end
 
+
+    #should be patch
     post "/days/:id" do
         @user = current_user
         @day = Day.find(params[:id])
@@ -61,5 +69,9 @@ class DaysController < ApplicationController
         else
             redirect "/login"
         end
+    end
+
+    get "/days/:id/delete" do
+
     end
 end
