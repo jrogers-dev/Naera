@@ -26,13 +26,18 @@ class DaysController < ApplicationController
     end
 
     get "/days/create" do
-        erb :"/days/create"
+        if logged_in?
+            @user = current_user
+            erb :"/days/create"
+        else
+            redirect "/login"
+        end
     end
 
     post "/days/create" do
         if logged_in?
             @user = current_user
-            @day = Day.create(date: Date.today, calories: 0, protein: 0, carbs: 0, fat: 0)
+            @day = Day.create(date: params[:date], calories: 0, protein: 0, carbs: 0, fat: 0)
             @user.days << @day
             redirect "/days/#{@day.id}"
         else

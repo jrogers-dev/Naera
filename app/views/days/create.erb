@@ -36,33 +36,19 @@
 
     <!-- Content -->
     <main class="s-layout__content">
-        <form method="POST" action="/days/<%= @day.id %>">
-            <div class="form-group">
-                <label for="foodName">Name</label>
-                <input type="text" class="form-control" id="foodName" name="food[name]" aria-describedby="foodHelp" placeholder="Pizza" required>
-                <small id="foodHelp" class="form-text text-muted">What's the food called?</small>
+        <form method="POST" action="/days/create">
+            <div class="form-group" id="are-you-sure">
+                <br>
+                <label for="date">Create a Day</label>
+                <br><br>
+                <input type="date" class="form-control" name="date" aria-describedby="foodHelp" required>
+                <small id="dateHelp" class="form-text text-muted">What date do you want to track?</small>
             </div>
-            <div class="form-group">
-                <label for="calories">Calories</label>
-                <input type="number" class="form-control" id="calories" name="food[calories]" aria-describedby="caloriesHelp" placeholder="130" required>
-                <small id="caloriesHelp" class="form-text text-muted">How many calories did it contain?</small>
-            </div>
-            <div class="form-group">
-                <label for="protein">Protein</label>
-                <input type="number" class="form-control" id="protein" name="food[protein]" aria-describedby="proteinHelp" placeholder="30" required>
-                <small id="proteinHelp" class="form-text text-muted">How many grams of protein did it contain?</small>
-            </div>
-            <div class="form-group">
-                <label for="carbs">Carbs</label>
-                <input type="number" class="form-control" id="carbs" name="food[carbs]" aria-describedby="carbsHelp" placeholder="40" required>
-                <small id="carbsHelp" class="form-text text-muted">How many grams of carbs did it contain?</small>
-            </div>
-            <div class="form-group">
-                <label for="fat">Fat</label>
-                <input type="number" class="form-control" id="fat" name="food[fat]" aria-describedby="fatHelp" placeholder="20" required>
-                <small id="fatHelp" class="form-text text-muted">How many grams of fat did it contain?</small>
-            </div>
-            <button type="submit" class="btn btn-primary" name="submit">Add Food</button>
+            <br>
+            <button type="submit" class="btn btn-lg btn-success btn-block text-uppercase" name="submit">Create</button>
+            <a href="/days" class="btn btn-lg btn-primary btn-block text-uppercase" role="button">
+                      <span>Cancel</span>
+            </a>
         </form>
     </main>
 </div>
