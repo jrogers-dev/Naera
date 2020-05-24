@@ -1,7 +1,6 @@
 class Day < ActiveRecord::Base
   belongs_to :user
-  has_many :day_foods
-  has_many :foods, through: :day_foods
+  has_many :foods
 
   def update_stats
     stats_hash = {
