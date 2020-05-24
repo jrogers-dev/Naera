@@ -42,9 +42,6 @@
   <div class="row">
     <div class="col-md-12">
       <h2>Previous Days You've Tracked</h2>
-          <a href="/days/<%= d.id %>/edit" class="btn btn-success btn-xs" role="button">
-            <span class="glyphicon glyphicon-plus">Add</span>
-          </a>
       <div class="table-responsive">
         <table id="mytable" class="table table-bordred table-striped">
           <thead>
@@ -54,7 +51,13 @@
             <th>Carbs</th>
             <th>Fat</th>
             <th></th>
-            <th></th>
+            <th>
+              <p data-placement="top" data-toggle="tooltip" title="Add a New Day">
+                <a href="/days/create" class="btn btn-success btn-xs" role="button">
+                  <span class="glyphicon glyphicon-plus"></span>
+                </a>
+              </p>
+            </th>
           </thead>
           <tbody>
             <% @days.each do |d| %>
