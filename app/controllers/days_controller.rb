@@ -58,7 +58,21 @@ class DaysController < ApplicationController
     end
 
     delete "/days/:id" do
-
+        if logged_in?
+            @day = Day.find(params[:id])
+            @user = current_user
+            if @day.user_id == @user.id
+                @day.foods.each do |f|
+                    f.destroy
+                end
+                @day.destroy
+                redirect "/days"
+            else
+                redirect "/days"
+            end
+        else
+            redirect "/login"
+        end 
     end
 
     get "/days/:id/edit" do
