@@ -57,6 +57,10 @@ class DaysController < ApplicationController
         end 
     end
 
+    delete "/days/:id" do
+
+    end
+
     get "/days/:id/edit" do
         if logged_in?
             @day = Day.find(params[:id])
