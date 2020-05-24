@@ -107,17 +107,9 @@
       
       <!-- Food Table Section-->
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12"> 
           <h2>Foods for This Day
           <a href="/days/<%= @day.id %>/edit">  
-          <button
-            class="btn btn-success btn-m"
-            data-title="Add"
-            data-toggle="modal"
-            data-target="#add"
-          >
-            <span class="glyphicon glyphicon-plus"> </span> Add
-          </button></a></h2>
           <div class="table-responsive">
             <table id="mytable" class="table table-bordred table-striped">
               <thead>
@@ -127,7 +119,13 @@
                 <th>Carbs</th>
                 <th>Fat</th>
                 <th></th>
-                <th></th>
+                <th>
+                  <p data-placement="top" data-toggle="tooltip" title="Add a Food">
+                    <a href="/days/create" class="btn btn-success btn-xs" role="button">
+                      <span class="glyphicon glyphicon-plus"></span>
+                    </a>
+                  </p>
+                </th>
               </thead>
               <tbody>
                 <% @day.foods.each do |f| %>
