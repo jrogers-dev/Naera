@@ -36,6 +36,21 @@
 
     <!-- Content -->
     <main class="s-layout__content">
-
+        <div>
+            <br><br><br>
+            <form class="form-delete" method="POST" action="/days/<%=@day.id%>">
+            <input id="hidden" type="hidden" name="_method" value="delete">
+                <div id="are-you-sure">
+                    <label>Are you sure you want to delete all data for:</label>
+                    <br><br>
+                    <label><%=@day.date.strftime('%A, %b %d %Y')%></label>
+                </div>
+                <br><br>
+                <button class="btn btn-lg btn-danger btn-block text-uppercase" type="submit">Delete</button>
+                <a href="/days" class="btn btn-lg btn-primary btn-block text-uppercase" role="button">
+                      <span>Cancel</span>
+                </a>
+            </form>
+        </div>
     </main>
 </div>

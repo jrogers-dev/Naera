@@ -76,6 +76,16 @@ class DaysController < ApplicationController
     end
 
     get "/days/:id/delete" do
-
+        if logged_in?
+            @day = Day.find(params[:id])
+            @user = current_user
+            if @day.user_id == @user.id
+                erb :"/days/delete"
+            else
+                redirect "/days"
+            end
+        else
+            redirect "/login"
+        end
     end
 end
