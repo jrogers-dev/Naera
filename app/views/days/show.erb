@@ -134,11 +134,14 @@
                     <td><%= f.carbs %></td>
                     <td><%= f.fat %></td>
                     <td>
-                      <p data-placement="top" data-toggle="tooltip" title="Delete">
-                        <a href="/foods/<%= f.id %>" class="btn btn-danger btn-xs" role="button">
-                          <span class="glyphicon glyphicon-trash"></span>
-                        </a>
-                      </p>
+                      <form class="form-delete" method="POST" action="/foods/<%= f.id %>">
+                        <input id="hidden" type="hidden" name="_method" value="delete">
+                        <p data-placement="top" data-toggle="tooltip" title="Delete Food">
+                          <button class="btn btn-danger btn-xs" type="submit">
+                            <span class="glyphicon glyphicon-trash"></span>
+                          </button>
+                        </p>
+                      </form>
                     </td>
                   </tr>
                 <% end %>

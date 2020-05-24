@@ -4,7 +4,7 @@ class FoodsController < ApplicationController
             @food = Food.find(params[:id])
             @user = current_user
             if @food.user_id == @user.id
-                @day = Day.find(@food.day.id)
+                @day = Day.find(@food.dayfood.day.id)
                 @food.destroy
                 redirect "/days/#{@day.id}"
             else
