@@ -1,11 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
 :root {
     --input-padding-x: 1.5rem;
-    --input-padding-y: .75rem;
+    --input-padding-y: 1.25rem;
   }
   
   body {
     background: #cefaa6;
     background: linear-gradient(to right, rgb(75, 150, 64), rgb(53, 104, 56));
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
   }
   
   .card-signin {
@@ -17,15 +21,15 @@
   
   .card-signin .card-title {
     margin-bottom: 2rem;
-    font-weight: 300;
-    font-size: 1.5rem;
+    font-weight: bold;
   }
   
   .card-signin .card-img-left {
-    width: 65%;
+    width: 60%;
     /* Link to your background image using in the property below! */
-    background: scroll center url('https://images.unsplash.com/photo-1546241072-48010ad2862c');
-    
+    background: url('https://images.unsplash.com/photo-1546241072-48010ad2862c');
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
   }
   
@@ -34,18 +38,10 @@
   }
   
   .welcome-text {
-    width: 80%;
+    width: 100%;
   }
   
-  .form-signin .btn {
-    font-size: 80%;
-    border-radius: 5rem;
-    letter-spacing: .1rem;
-    font-weight: bold;
-    padding: 1rem;
-    transition: all 0.2s;
-  }
-  
+
   .form-label-group {
     position: relative;
     margin-bottom: 1rem;
@@ -53,7 +49,7 @@
   
   .form-label-group input {
     height: auto;
-    border-radius: 2rem;
+ 
   }
   
   .form-label-group>input,
@@ -69,7 +65,7 @@
     width: 100%;
     margin-bottom: 0;
     /* Override default `<label>` margin */
-    line-height: 1.5;
+    line-height: 1.2;
     color: #495057;
     border: 1px solid transparent;
     border-radius: .25rem;
@@ -99,12 +95,13 @@
   .form-label-group input:not(:placeholder-shown) {
     padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
     padding-bottom: calc(var(--input-padding-y) / 3);
+    font-size: 14px;
   }
   
   .form-label-group input:not(:placeholder-shown)~label {
     padding-top: calc(var(--input-padding-y) / 3);
     padding-bottom: calc(var(--input-padding-y) / 3);
-    font-size: 12px;
+    font-size: 14px;
     color: #777;
   }
   
@@ -116,6 +113,7 @@
   .btn-register {
     color: white;
     background-color: #015f21;
+    font-weight: bold;
   }
   
   .elipsis {

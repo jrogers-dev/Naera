@@ -16,20 +16,24 @@
              <!-- Background image for card set in CSS! -->
           </div>
           <div class="card-body">
-            <h5 class="card-title text-center">Welcome Back!</h5>
-            <br><br><br>
+            <br>
+            <h1 class="card-title text-center">Welcome Back!</h1>
+            <hr class="my-4">
+            <br><br>
             <form class="form-signin" method="POST" action="/login">
                 <div class="form-label-group">
                     <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required>
                     <label for="inputEmail">Email address</label>
                 </div>
-
+                <br>
                 <div class="form-label-group">
                     <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
                     <label for="inputPassword">Password</label>
                 </div>
-                <br><br><br>
-                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Log In</button>
+                <br><br>
+                <hr class="my-4">
+                <button class="btn btn-lg btn-signin btn-block text-uppercase" type="submit">Log In</button>
+                <a class="d-block text-center mt-2 small" href="/signup">Sign Up</a>
                 <br><br>
             </form>
           </div>
