@@ -49,19 +49,21 @@ class DaysController < ApplicationController
         if logged_in?
             @user = current_user
             @day = Day.find(params[:id])
-            @day.update_stats
-            erb :"/days/show"
+            if @day.user_id == @user.id
+                @day.update_stats
+                erb :"/days/show"
+            else
+                redirect "/days"
+            end
         else
             redirect "/login"
         end
     end
 
-
-    #should be patch
     post "/days/:id" do
         @user = current_user
         @day = Day.find(params[:id])
-        if params[:name] != ""
+        if params[:name] != "" && @day.user_id == @user.id
             @food = Food.create(params[:food])
             @user.foods << @food
             @day.foods << @food
