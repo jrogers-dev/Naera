@@ -2,7 +2,7 @@
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<link rel="stylesheet" href="/stylesheets/login.css" />
+<link rel="stylesheet" href="/stylesheets/signup.css" />
 </head>
 <body>
 
@@ -15,27 +15,26 @@
            <!-- Background image for card set in CSS! -->
         </div>
         <div class="card-body">
-            <h5 class="card-title text-center">Register</h5>
+            <h1 class="card-title text-center">Register</h1>
+            <hr class="my-4">
             <form class="form-signin" method="POST" action="/signup">
-                <br><br>
+              <br><br>
               <div class="form-label-group">
                 <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required>
                 <label for="inputEmail">Email address</label>
               </div>
-              
               <br>
-
               <div class="form-label-group">
                 <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
                 <label for="inputPassword">Password</label>
               </div>
-              
               <div class="form-label-group">
                 <input type="password" id="inputConfirmPassword" name="confirm" class="form-control" placeholder="Password" required>
                 <label for="inputConfirmPassword">Confirm password</label>
               </div>
-                <br><br>
-              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
+              <br>
+              <hr class="my-4">
+              <button class="btn btn-lg btn-register btn-block text-uppercase" type="submit">Register</button>
               <a class="d-block text-center mt-2 small" href="/login">Sign In</a>
               <br><br>
             </form>
