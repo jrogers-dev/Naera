@@ -26,15 +26,25 @@ class DaysController < ApplicationController
     end
 
     get "/days/create" do
-
+        erb :"/days/create"
     end
 
-    
+    post "/days/create" do
+        if logged_in?
+            @user = current_user
+            @day = Day.create(date: Date.today, calories: 0, protein: 0, carbs: 0, fat: 0)
+            @user.days << @day
+            redirect "/days/#{@day.id}"
+        else
+            redirect "/login"
+        end
+    end
 
     get "/days/:id" do
         if logged_in?
             @user = current_user
             @day = Day.find(params[:id])
+            @day.update_stats
             erb :"/days/show"
         else
             redirect "/login"
@@ -50,7 +60,6 @@ class DaysController < ApplicationController
             @food = Food.create(params[:food])
             @user.foods << @food
             @day.foods << @food
-            @day.update_stats
             redirect "/days/#{@day.id}"
         else
             redirect "/days/#{@day.id}/edit"
