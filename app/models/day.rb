@@ -2,6 +2,9 @@ class Day < ActiveRecord::Base
   belongs_to :user
   has_many :foods
 
+  validates :date, presence: true
+
+
   def update_stats
     stats_hash = {
       calories: 0,
