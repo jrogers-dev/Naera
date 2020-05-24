@@ -61,7 +61,7 @@
           <tbody>
             <% @days.each do |d| %>
               <tr>
-                <td><a href="/days/<%= d.id %>"><%= d.date %></a></td>
+                <td><a href="/days/<%= d.id %>"><%= d.date.strftime('%a, %b %d %Y') %></a></td>
                 <td><%= d.calories %></td>
                 <td><%= d.protein %></td>
                 <td><%= d.carbs %></td>

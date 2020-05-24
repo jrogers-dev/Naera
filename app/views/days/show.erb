@@ -50,7 +50,7 @@
                 <% if @day.date == Date.today%>
                   <h1>Today's Summary</h1> 
                 <% else %>
-                  <h1>Summary for: <%= @day.date %></h1>
+                  <h1>Summary for: <%= @day.date.strftime('%A, %b %d %Y') %></h1>
                 <% end %>
               </div>
               <div class="row justify-content-md-center">
@@ -153,5 +153,3 @@
     </div>
   </main>
 </div>
-
-<!--<a href="/days/<%= @day.id %>/edit">Add Food</a>-->
