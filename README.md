@@ -4,10 +4,6 @@ Næra is a Sinatra-based web application that allows users to track their daily 
 
 Future additions include water and exercise tracking, API access to the USDA nutritional information database for food searching and importing, and a PWA version.
 
-## Development
-
-...
-
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/jarogers095/Naera. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/jarogers095/Naera/blob/master/CODE_OF_CONDUCT.md).
