@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="/stylesheets/sidebar.css" />
+<link rel="stylesheet" href="/stylesheets/listtable.css" />
+<link rel="stylesheet" href="/stylesheets/default.css" />
+<div class="s-layout">
+
+<!-- Sidebar -->
+  <div class="s-layout__sidebar">
+    <a class="s-sidebar__trigger" href="#0">
+      <i class="fa fa-bars"></i>
+    </a>
+
+    <nav class="s-sidebar__nav">
+      <ul>
+          <li>
+            <a class="s-sidebar__nav-link">
+                <i class="fa fa-user"></i><em><%= @user.email %></em>
+            </a> 
+          </li>
+          <li>
+            <a class="s-sidebar__nav-link" href="/days/today">
+                <i class="fa fa-clock-o"></i><em>Today</em>
+            </a>
+          </li>
+          <li>
+            <a class="s-sidebar__nav-link" href="/days">
+              <i class="fa fa-calendar"></i><em>Previous Days</em>
+            </a>
+          </li>
+          <li>
+              <a class="s-sidebar__nav-link" href="/logout">
+                  <i class="fa fa-sign-out"></i><em>Logout</em>
+              </a>
+          </li>
+      </ul>
+    </nav>
+  </div>
+
+<!-- Content -->
+  <main class="s-layout__content">
+
+    <form method="POST" action="/foods/<%= @food.id %>">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+      <div class="form-group">
+        <label for="foodName">Name</label>
+        <input type="text" class="form-control" id="foodName" name="food[name]" aria-describedby="foodHelp" placeholder="<%= @food.name %>" required>
+        <small id="foodHelp" class="form-text text-muted">What's the food called?</small>
+      </div>
+      <div class="form-group">
+        <label for="calories">Calories</label>
+        <input type="number" class="form-control" id="calories" name="food[calories]" aria-describedby="caloriesHelp" placeholder="<%= @food.calories %>" required>
+        <small id="caloriesHelp" class="form-text text-muted">How many calories did it contain?</small>
+      </div>
+      <div class="form-group">
+        <label for="protein">Protein</label>
+        <input type="number" class="form-control" id="protein" name="food[protein]" aria-describedby="proteinHelp" placeholder="<%= @food.protein %>" required>
+        <small id="proteinHelp" class="form-text text-muted">How many grams of protein did it contain?</small>
+      </div>
+      <div class="form-group">
+        <label for="carbs">Carbs</label>
+        <input type="number" class="form-control" id="carbs" name="food[carbs]" aria-describedby="carbsHelp" placeholder="<%= @food.carbs %>" required>
+        <small id="carbsHelp" class="form-text text-muted">How many grams of carbs did it contain?</small>
+      </div>
+      <div class="form-group">
+        <label for="fat">Fat</label>
+        <input type="number" class="form-control" id="fat" name="food[fat]" aria-describedby="fatHelp" placeholder="<%= @food.fat %>" required>
+        <small id="fatHelp" class="form-text text-muted">How many grams of fat did it contain?</small>
+      </div>
+      <button type="submit" class="btn btn-primary" name="submit">Edit Food</button>
+    </form>
+  </main>
+</div>

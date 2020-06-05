@@ -16,8 +16,10 @@ class DaysController < ApplicationController
             if @day
                 redirect "/days/#{@day.id}"
             else
-                @day = Day.create(date: Date.today, calories: 0, protein: 0, carbs: 0, fat: 0)
-                @user.days << @day
+                #@day = Day.create(date: Date.today, calories: 0, protein: 0, carbs: 0, fat: 0)
+                @day = @user.days.create(date: Date.today, calories: 0, protein: 0, carbs: 0, fat: 0)
+                
+                #@user.days << @day
                 redirect "/days/#{@day.id}"
             end
         else

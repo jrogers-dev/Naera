@@ -117,6 +117,7 @@
                 <th>Protein</th>
                 <th>Carbs</th>
                 <th>Fat</th>
+                <th></th>
                 <th>
                   <p data-placement="top" data-toggle="tooltip" title="Add a Food">
                     <a href="/days/<%= @day.id %>/edit" class="btn btn-success btn-xs" role="button">
@@ -133,6 +134,13 @@
                     <td><%= f.protein %></td>
                     <td><%= f.carbs %></td>
                     <td><%= f.fat %></td>
+                    <td>
+                      <p data-placement="top" data-toggle="tooltip" title="Edit Food">
+                        <a href="/foods/<%= f.id %>/edit" class="btn btn-primary btn-xs" role="button">
+                        <span class="glyphicon glyphicon-edit"></span>
+                        </a>
+                      </p>
+                    </td>
                     <td>
                       <form class="form-delete" method="POST" action="/foods/<%= f.id %>">
                         <input id="hidden" type="hidden" name="_method" value="delete">
